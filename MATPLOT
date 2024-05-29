@@ -1,0 +1,157 @@
+[7:04 PM, 5/28/2024] Shigella Soni REC: #DATA VISUALIZATION-1
+import matplotlib.pyplot as plt
+import numpy as np
+xpoints=np.array ([0,6])
+ypoints=np.array([0,250])
+print(plt.plot(xpoints,ypoints))
+print(plt.show())
+#points without line
+x=np.array([0,5])
+y=np.array([0,25])
+print(plt.plot(x,y,marker='p'))
+print(plt.show())
+#multiple points
+xpoints=np.array([1,2,6,3])
+ypoints=np.array([3,8,1,10])
+print(plt.plot(xpoints,ypoints))
+print(plt.show())
+#default x points
+ypoints=np.array([3,8,1,10])
+print(plt.plot(ypoints))
+print(plt.show())
+[7:04 PM, 5/28/2024] Shigella Soni REC: #DATA VISUALIZATION-2
+import matplotlib.pyplot as plt
+import numpy as np
+#tite and label
+ypoints=np.array([3,8,1,10,5,7])
+print(plt.plot(ypoints,linestyle='dashed'))
+plt.title('sample graph')
+plt.xlabel('x axis')
+plt.ylabel('y axis')
+print(plt.show())
+#marker ,color,linewidth
+ypoints=np.array([3,8,1,10,5,7])
+print(plt.plot(ypoints,marker ='o'))
+print(plt.show())
+
+xpoints=np.array([0,6])
+ypoints=np.array([0,250])
+print(plt.plot(xpoints,ypoints,'hotpink'))
+print(plt.show())
+
+print(plt.plot(xpoints,ypoints,linewidth='20',color='r'))
+print(plt.show())
+#Multiple lines and grid
+y1=np.array([3,8,1,10])
+y2=np.array([6,2,7,11])
+print(plt.plot(y1))
+print(plt.plot (y2))
+plt.grid()
+print(plt.show())
+
+#sub_plot
+#plot1:
+x=np.array([0,1,2,3])
+y=np.array([3,8,1,10])
+plt.subplot(1,2,1)
+plt.plot(x,y)
+#plot2:
+x=np.array([0,1,2,3])
+y=np.array([10,20,30,40])
+plt.subplot(1,2,2)
+plt.plot(x,y)
+plt.show()
+#scatter 1
+x=np.array([1,2,6,8])
+y=np.array([3,8,1,10])
+plt.scatter(x,y)
+plt.show()
+#scatter 2
+x=np.array([1,2,6,8])
+y=np.array([3,8,1,10])
+plt.scatter(x,y)
+a=np.array([5,7,9])
+b=np.array([2,5,8])
+plt.scatter(a,b)
+plt.show()
+[7:04 PM, 5/28/2024] Shigella Soni REC: #DATA VISUALIZATION-3
+import matplotlib.pyplot as plt
+import numpy as np
+x=np.array(['A','B','C','D'])
+y=np.array([3,8,1,10])
+plt.bar(x,y)
+plt.show()
+plt.bar([0.25,1.25,2.25,3.25,4.25],[50,40,70,80,20],label='BMW',width=0.5)
+plt.bar([0.75,1.75,2.75,3.75,4.75],[80,20,20,50,60],label='AUDI',color='r',width=0.5)
+plt.legend()
+plt.xlabel('Days')
+plt.ylabel('Distance(kms)')
+plt.title('information')
+plt.show()
+#horizonal bar
+plt.barh(x,y)
+plt.show()
+
+#color option
+plt.bar(x,y,color='r')
+plt.show()
+
+#width option
+plt.bar(x,y,color='r',width=0.1)
+plt.show()
+
+#histogram
+x=np.random.normal(170)
+plt.hist(x)
+plt.show()
+
+#pie chart
+y=np.array([35,25,25,15])
+plt.pie(y)
+plt.show()
+
+#with labels
+y=np.array([35,25,25,15])
+mylabels=["Apples","Bananas","Cherries","Dates"]
+plt.pie(y, labels= mylabels)
+plt.show()
+
+#explode
+y=np.array([35,25,25,15])
+mylabels=["Apples","Bananas","Cherries","Dates"]
+myexplode=[0.2,0,0,0]
+plt.pie(y,labels=mylabels,explode=myexplode)
+plt.show()
+[7:04 PM, 5/28/2024] Shigella Soni REC: #DATA VISUALIZATION-4
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import plotly.express as px
+
+#seaborn package
+xpoints=np.array([0,20,120,200])
+ypoints=np.array([10,80,100,120,150,180,250])
+
+print(sns.lineplot(data=ypoints))
+print(plt.show())
+
+print(sns.scatterplot(data=ypoints))
+print(plt.show())
+
+print(sns.barplot(data=ypoints))
+print(plt.show())
+
+#3D plot
+x=np.array([1,2,6,8,12,14,20])
+y=np.array([3,8,1,10,12,16,18])
+fig=plt.figure(figsize=(12,8))
+ax=plt.axes(projection='3d')
+plt_3d=ax.scatter3D(x,y)
+plt.colorbar(plt_3d)
+plt.show()
+
+#plotly package
+x=np.array([10,80,100,120,150,180,250])
+fig=px.scatter (x)
+fig.show()
