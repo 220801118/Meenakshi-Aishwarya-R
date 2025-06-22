@@ -1,0 +1,88 @@
+//TO CALCULATE LENGTH OF THE STRING
+s=input("Enter the string: ")
+print("Lenth of String =",len(s))
+
+//TO COUNT THE NUMBER OF CHARACTERS (CHARACTER FREQUENCY) IN A STRING.
+s=input("Enter the string: ")
+set1=set()
+for i in s:
+    set1.add(i)
+print("{",end="")
+count=0
+l=len(set1)
+for i in set1:
+    count=count+1
+    print(f"\'{i}\' : {s.count(i)}",end="")
+    if(count!=l):
+        print(end=",")
+print("}")
+
+//WRITE A PYTHON PROGRAM TO GET A STRING FROM A GIVEN STRING WHERE ALL OCCURRENCES OF ITS FIRST CHAR HAVE BEEN CHANGED TO '@', EXCEPT THE FIRST CHAR ITSELF.
+s=input("enter the string: ")
+first=s[0]
+count=0
+for i in s:
+    count=count+1
+    if(count>1):
+        if(i==first):
+            print("@",end="")
+            continue
+    print(i,end="")    
+
+//WRITE A PYTHON PROGRAM TO GET A SINGLE STRING FROM TWO GIVEN STRINGS, SEPARATED BY A SPACE AND SWAP THE FIRST TWO CHARACTERS OF EACH STRING.
+   a = 'abc'
+b = 'xyz'
+print("Before Swap :",a," ",b)
+a1 = b[:2] + a[2:]
+b1 = a[:2] + b[2:]
+print("After Swap :",a1," ",b1)
+
+//WRITE A PYTHON PROGRAM TO REMOVE THE NTH INDEX CHARACTER FROM A NONEMPTY STRING.
+s=input("enter a string: ")
+i=int(input("enter the index: "))
+for j in range(len(s)):
+    if j==i:
+        continue
+    print(s[j],end="")
+
+//WRITE A PYTHON PROGRAM TO CHANGE A GIVEN STRING TO A NEW STRING WHERE THE FIRST AND LAST CHARS HAVE BEEN EXCHANGED
+s=input("enter the string: ")
+a=s[0]
+b=s[-1]
+print(b+s[1:-1]+a)
+
+//WRITE A PYTHON PROGRAM TO REMOVE THE CHARACTERS WHICH HAVE ODD INDEX VALUES OF A GIVEN STRING
+s=input("enter the string: ")
+l=len(s)
+print(s[0:l:2])
+
+//WRITE A PYTHON PROGRAM TO COUNT THE OCCURRENCES OF EACH WORD IN A GIVEN SENTENCE
+s=input("Enter the string: ")
+s1=s.split(" ")
+set1=set()
+for i in s1:
+    set1.add(i)
+print("{",end="")
+count=0
+l=len(set1)
+for i in set1:
+    count=count+1
+    print(f"\'{i}\' : {s.count(i)}",end="")
+    if(count!=l):
+        print(end=",")
+print("}")
+
+//WRITE A PYTHON SCRIPT THAT TAKES INPUT FROM THE USER AND DISPLAYS THAT INPUT BACK IN UPPER AND LOWER CASES.
+s=input("enter the string: ")
+print(s.upper())
+print(s.lower())
+
+//WRITE A PYTHON FUNCTION TO REVERSES A STRING IF IT'S LENGTH IS A MULTIPLE OF 4.
+s=input("enter the string: ")
+l=len(s)
+if l%4==0:
+    print(s[::-1])
+else:
+    print(s)
+    
+
