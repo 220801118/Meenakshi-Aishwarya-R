@@ -84,5 +84,41 @@ if l%4==0:
     print(s[::-1])
 else:
     print(s)
-    
+
+//Write a Python function to convert a given string to all uppercase if it contains at least 2 uppercase characters in the first 4 characters.
+s=input("enter the string: ")
+count=0
+for i in range(0,4):
+    if (s[i]>='A' and s[i]<='Z'):
+        count=count+1 
+if count>=2:
+    print(s.upper())
+else:
+    print(s)
+
+//Write a Python program to sort a string lexicographically.
+s=input("enter the string: ")
+s1=sorted(s)
+print(s1)
+
+//Write a Python program to check whether a string starts with specified characters.
+s=input("enter the string: ")
+prefix=input("enter the prefix: ")
+if prefix in s[0:2]:
+    print("True")
+else:
+    print("False")
+
+//Write a Python program to reverse a string.
+s=input("enter the string: ")
+print(s[::-1])
+
+//Write a Python program to reverse words in a string.
+s=input("enter the string: ")
+s1=s.split(" ")
+l=len(s1)
+while l!=0:
+    print(s1[l-1],end=" ")
+    l=l-1
+
 
